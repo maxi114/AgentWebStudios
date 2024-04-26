@@ -16,7 +16,7 @@ const SliderOne = () => {
     infinite: true,
     slidesToShow: 3,
     autoplay: true,
-    speed: 4000,
+    speed: 3000,
     autoplaySpeed: 1000,
     className: "w-full mx-auto cursor-pointer center-mode",
   };
@@ -28,28 +28,14 @@ const SliderOne = () => {
   }
 
   return (
-    <div>
+    <div >
       <Slider {...settings}>
-        <>
-          <div className="rounded-md px-2 md:p-10">
-            <Image
-              priority
-              src="/images/business.png"
-              alt="logo"
-              width={500}
-              height={500}
-              className="
-                  rounded-2xl
-                      "
-            />
-          </div>
-        </>
 
         <>
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/Realtor.png"
+              src="/images/realtor2.png"
               alt="logo"
               width={500}
               height={500}
@@ -79,7 +65,7 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/realtor2.png"
+              src="/images/9.png"
               alt="logo"
               width={500}
               height={500}

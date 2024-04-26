@@ -66,6 +66,10 @@ const Navbar = ({
             Partner Brands
           </div>
 
+          <div onClick={scrollToBrands} className="hover:text-gray-50">
+            Pricing
+          </div>
+
         </div>
 
         <div className="flex md:hidden">
