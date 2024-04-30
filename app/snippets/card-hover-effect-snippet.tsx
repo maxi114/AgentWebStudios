@@ -1,5 +1,7 @@
 import { HoverEffect } from "@/components/Ui/card-hover-effect";
-import { PiAppStoreLogo, PiHeadsetFill, PiLock, PiMegaphone, PiMonitor, PiStorefront } from "react-icons/pi";
+import { PiAppStoreLogo, PiHeadsetFill, PiLock, PiMegaphone, PiMonitor } from "react-icons/pi";
+import { FaLaptopHouse, FaSearch  } from "react-icons/fa";
+import { FaGears } from "react-icons/fa6";
 
 export function CardHoverEffectDemo() {
   return (
@@ -9,46 +11,29 @@ export function CardHoverEffectDemo() {
   );
 }
 export const projects = [
+
     {
         icon : <div className="bg-blue-100 p-4 rounded-full"><PiMonitor className="w-8 h-8 text-blue-600" /></div>,
-        title: "Website Design",
+        title: "Real Estate Website",
         description:
-          "We build fully responsive websites that look great on all devices. Our websites are designed to convert visitors into customers.",
+          "Your website is your opportunity to stand out from the crowd and set yourself apart.",
       
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiStorefront className="w-8 h-8 text-blue-600" /></div>,
-        title: "E-commerce Store",
+        icon : <div className="bg-blue-100 p-4 rounded-full"><FaLaptopHouse className="w-8 h-8 text-blue-600" /></div>,
+        title: "IDX-Listings",
         description:
-          "From small stores to large online retailers, we have the expertise to build a store that will help you grow your business.",
+          "Provide a convenient way to display your listings to your clients.",
        
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiLock className="w-8 h-8 text-blue-600" /></div>,
-        title: "Authentication",
+        icon : <div className="bg-blue-100 p-4 rounded-full"><FaGears className="w-8 h-8 text-blue-600" /></div>,
+        title: "3rd Party Integrations",
         description:
-          "Secure authentication solutions for your website or app. We use the latest technology to keep your data safe.",
+          "Integrate your website with your CRM and capture leads effectively.",
       
       },
-      {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiMegaphone className="w-8 h-8 text-blue-600" /></div>,
-        title: "Social Media",
-        description:
-          "We offer social media management and ad creation services. We can help you grow your social media presence and reach new customers.",
-      
-      },
-      {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiAppStoreLogo className="w-8 h-8 text-blue-600" /></div>,
-        title: "App Development",
-        description:
-          "We build custom mobile apps for iOS and Android. Our apps are designed to be user-friendly and performant.",
-      
-      },
-      {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><PiHeadsetFill className="w-8 h-8 text-blue-600" /></div>,
-        title: "Support",
-        description:
-          "We offer support for all our clients. We are here to help you with any issues or questions you may have.",
-     
-      },
+
 ];
+
+" and be in control of defining your personal brand."

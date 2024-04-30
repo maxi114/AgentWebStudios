@@ -14,7 +14,7 @@ const SliderOne = () => {
   const settings = {
     arrows: false,
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: 2,
     autoplay: true,
     speed: 3000,
     autoplaySpeed: 1000,
@@ -35,7 +35,7 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/realtor2.png"
+              src="/images/business.png"
               alt="logo"
               width={500}
               height={500}
@@ -65,7 +65,7 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/9.png"
+              src="/images/realtor2.png"
               alt="logo"
               width={500}
               height={500}
@@ -80,7 +80,7 @@ const SliderOne = () => {
           <div className="rounded-md px-2 md:p-10">
             <Image
               priority
-              src="/images/business.png"
+              src="/images/9.png"
               alt="logo"
               width={500}
               height={500}
@@ -90,6 +90,7 @@ const SliderOne = () => {
             />
           </div>
         </>
+
       </Slider>
     </div>
   );
