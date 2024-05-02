@@ -9,9 +9,9 @@ const FAQS = () => {
         ">
             <div className=" p-10 md:p-4 md:px-20">
                 <div className="text-3xl md:text-7xl font-bold text-black">
-                    Ready to achieve 
+                    Want a stunning 
                     <br />
-                    your business goals ?
+                    Website ?
                 </div>
                 <br />
                 <div className="  font-semibold text-3xl md:text-4xl text-gradient bg-gradient-to-r from-emerald-600 to-blue-300 bg-clip-text text-transparent">

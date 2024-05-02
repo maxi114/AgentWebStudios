@@ -12,9 +12,7 @@ export async function POST(req: Request) {
       last_name,
       email,
      
-      company_name,
-      help,
-      company_size,
+      packages,
       info,
     } = await req.json();
 
@@ -38,10 +36,8 @@ export async function POST(req: Request) {
                     <p>First Name: ${first_name}</p>
                     <p>Last Name: ${last_name}</p>
                     <p>Work Email: ${email}</p>
-                
-                    <p>Company Name: ${company_name}</p>
-                    <p>Company Size: ${company_size}</p>
-                    <p>Help: ${help}</p>
+                    <p>Package: ${packages}</p>
+                    
                 
                     <p>Info: ${info}</p>
                 `,

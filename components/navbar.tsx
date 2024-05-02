@@ -9,17 +9,11 @@ import DropDownMenu from "./drop-down-menu";
 
 interface NavbarProps {
   scrollToWebsiteDesign: () => void;
-  scrollToGraphicDesign: () => void;
-  scrollToShopifyStores: () => void;
-  scrollToBrands: () => void;
   scrollToServices: () => void; // Define scrollToServices function
 }
 
 const Navbar = ({
   scrollToWebsiteDesign,
-  scrollToGraphicDesign,
-  scrollToShopifyStores,
-  scrollToBrands,
   scrollToServices, // Add scrollToServices to props
 }: NavbarProps) => {
   const [isDropDownVisible, setIsDropDownVisible] = useState(false);
@@ -58,17 +52,14 @@ const Navbar = ({
           <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
             Website Design
           </div>
-          <div onClick={scrollToGraphicDesign} className="hover:text-gray-50">
-            IDX Design
+
+          <div onClick={scrollToServices} className="hover:text-gray-50">
+            Services
           </div>
 
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
-            Partner Brands
-          </div>
-
-          <div onClick={scrollToBrands} className="hover:text-gray-50">
+          <a href = "/pricing" className="hover:text-gray-50">
             Pricing
-          </div>
+          </a>
 
         </div>
 

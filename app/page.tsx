@@ -22,9 +22,6 @@ export default function Home() {
   };
 
   const websiteDesignRef = useRef<HTMLDivElement>(null);
-  const graphicDesignRef = useRef<HTMLDivElement>(null);
-  const shopifyStoresRef = useRef<HTMLDivElement>(null);
-  const brandsRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
 
   const scrollToWebsiteDesign = () => {
@@ -35,17 +32,6 @@ export default function Home() {
     });
   };
 
-  const scrollToGraphicDesign = () => {
-    graphicDesignRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToShopifyStores = () => {
-    shopifyStoresRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const scrollToBrands = () => {
-    brandsRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
 
   // Function to scroll to Services section
   const scrollToServices = () => {
@@ -58,9 +44,6 @@ export default function Home() {
   <div className="max-w-5xl mx-auto">
     <Navbar
       scrollToWebsiteDesign={scrollToWebsiteDesign}
-      scrollToGraphicDesign={scrollToGraphicDesign}
-      scrollToShopifyStores={scrollToShopifyStores}
-      scrollToBrands={scrollToBrands}
       scrollToServices={scrollToServices}
     />
 
@@ -86,7 +69,7 @@ export default function Home() {
       <div ref={websiteDesignRef}>
         <WebsiteDesign />
       </div>
-      <div id ='services'>
+      <div ref={servicesRef} id ='services'>
         <Services />
       </div>
       <FAQS />

@@ -42,20 +42,10 @@ const FormSchema = z.object({
   first_name: z.string(),
   last_name: z.string(),
   email: z.string().email(),
-  job_title: z.string(),
-  company_name: z.string(),
-  help: z.enum([
-    "Evaluate Bird for my company",
-    "Learn More",
-    "Get a Quote",
-    "Other",
-  ]),
-  services: z.enum([
-    "Mobile App Develoment",
-    "Social Media Marketing",
-    "UI/UX Design",
-    "Branding",
-    "Website Development",
+  packages: z.enum([
+    "Discovery Package",
+    "Starter Package",
+    "Professional Package",
   ]),
   info: z.string(),
 });
@@ -64,17 +54,11 @@ type FormValues = {
   first_name: string;
   last_name: string;
   email: string;
-  job_title: string;
-  company_name: string;
-  help: "Evaluate Bird for my company" | "Learn More" | "Get a Quote" | "Other";
-  services:
-    | "Mobile App Develoment"
-    | "Social Media Marketing"
-    | "UI/UX Design"
-    | "Branding"
-    | "Website Development";
+  packages:
+    | "Discovery Package"
+    | "Starter Package"
+    | "Professional Package";
   info: string;
-  terms: boolean;
 };
 
 export default function ContactForm() {
@@ -88,10 +72,7 @@ export default function ContactForm() {
       first_name: "",
       last_name: "",
       email: "",
-      job_title: "",
-      company_name: "",
-      help: "Learn More",
-      services: "Mobile App Develoment",
+      packages: "Discovery Package",
       info: "",
     },
   });
@@ -121,7 +102,8 @@ export default function ContactForm() {
   }
 
   return (
-    <div className=" w-full   md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
+    <div className=" w-full h-screen  md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden ">
+       <div className="max-w-5xl mx-auto">
       <Navbar
         scrollToWebsiteDesign={() => {}}
         scrollToGraphicDesign={() => {}}
@@ -134,37 +116,7 @@ export default function ContactForm() {
           <div className="text-5xl font-medium  w-full md:w-2/3  pb-5 md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
             Contact our sales team
           </div>
-          <div
-            className="
-              
-              py-4
-              text-gray-300
-                    "
-          >
-            Let&apos;s talk about how Bird can help your team work better.
-          </div>
 
-          <div className="bg-[#f6f5f4] md:w-4/5 space-y-6 p-4 rounded-2xl my-4 hidden md:flex md:flex-col">
-            <div className="flex gap-4 border-b ">
-              <div className=" font-normal pb-4 ">
-                One flexible agency for your entire company to share knowledge,
-                ship projects, and collaborate.
-              </div>
-            </div>
-
-            <div className="flex gap-4 border-b ">
-              <div className=" font-normal pb-4 ">
-                Enterprise features to securely manage user access and security.
-              </div>
-            </div>
-
-            <div className="flex gap-4  ">
-              <div className=" font-normal pb-4 ">
-                Dedicated support to work with you on your setup and help you
-                build the best plan for your company.
-              </div>
-            </div>
-          </div>
         </div>
 
         <Form {...form}>
@@ -175,7 +127,7 @@ export default function ContactForm() {
             space-y-4
             h-full
             border rounded-3xl p-10
-            md:w-1/3
+            md:w-2/3
             
             
                      
@@ -230,26 +182,11 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="company_name"
-                render={({ field }) => (
-                  <FormItem className="items-center justify-center  w-full">
-                    <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      Company name?
-                    </FormLabel>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="services"
+                name="packages"
                 render={({ field }) => (
                   <FormItem className="items-center justify-center w-full">
                     <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                    Services you are interested in
+                    Which package are you inquiring about
                     </FormLabel>
                     <Select
                       onValueChange={field.onChange}
@@ -262,50 +199,12 @@ export default function ContactForm() {
                       </FormControl>
                       <SelectContent>
                         <div className="flex gap-4">
-                          <SelectItem value="Mobile App Develoment">
-                          Mobile App Develoment
+                          <SelectItem value="Discovery Package">
+                          Discovery Package
                           </SelectItem>
                         </div>
-                        <SelectItem value="Social Media Marketing">Social Media Marketing</SelectItem>
-                        <SelectItem value="51-200">51-200</SelectItem>
-                        <SelectItem value="501-1000">501-1000</SelectItem>
-                        <SelectItem value="1000+">1000+</SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </FormItem>
-                )}
-              />
-
-              <FormField
-                control={form.control}
-                name="help"
-                render={({ field }) => (
-                  <FormItem className="items-center justify-center  w-full">
-                    <FormLabel className="text-sm bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-                      How can we help ?
-                    </FormLabel>
-                    <Select
-                      onValueChange={field.onChange}
-                      defaultValue={field.value}
-                    >
-                      <FormControl>
-                        <SelectTrigger
-                        
-                        
-                        >
-                          <SelectValue placeholder="Select an option" />
-                        </SelectTrigger>
-                      </FormControl>
-                      <SelectContent>
-                        <div className="flex gap-4">
-                          <SelectItem value="Evaluate Bird for my company">
-                            Evaluate Bird for my company
-                          </SelectItem>
-                        </div>
-                        <SelectItem value="Learn More">Learn More</SelectItem>
-                        <SelectItem value="Get a Quote">Get a Quote</SelectItem>
-
-                        <SelectItem value="Other">Other</SelectItem>
+                        <SelectItem value="Starter Package">Starter Package</SelectItem>
+                        <SelectItem value="Professional Package">Professional Package</SelectItem>
                       </SelectContent>
                     </Select>
                   </FormItem>
@@ -326,24 +225,6 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-
-              <div className="flex gap-4 items-center">
-                <div>
-                  <Checkbox
-                    className="
-                outline
-                border-2
-                text-sm
-                font-light
-                bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400
-                "
-                  />
-                </div>
-                <div className="text-xs font-light  md:w-3/4 mb-1 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                  I agree to Bird&apos; sending marketing communications related
-                  to bird
-                </div>
-              </div>
 
               <div className="flex items-center gap-4">
                 <Button
@@ -390,6 +271,7 @@ export default function ContactForm() {
             </>
           )}
         </Form>
+      </div>
       </div>
     </div>
   );
