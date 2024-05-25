@@ -14,9 +14,16 @@ const Book = () => {
         />
         <div className="text-4xl pb-5 md:text-6xl text-center 
         bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          Free Consultation
+          Lets do this!
         </div>
 
+        <p className="mt-4 text-lg font-normal
+          text-neutral-300 max-w-lg 
+          text-center mx-auto">
+            Take the first step towards a beautiful new profile website by booking your consultation below.
+        </p>
+
+        <br />
         <InlineWidget url="https://calendly.com/maxkodi081/free-consultation" />
       </div>
     </>

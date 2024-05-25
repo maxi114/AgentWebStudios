@@ -1,7 +1,11 @@
 import { HoverEffect } from "@/components/Ui/card-hover-effect";
 import { PiAppStoreLogo, PiHeadsetFill, PiLock, PiMegaphone, PiMonitor } from "react-icons/pi";
 import { FaLaptopHouse, FaSearch  } from "react-icons/fa";
+import { MdAnalytics } from "react-icons/md";
 import { FaGears } from "react-icons/fa6";
+import { CiMobile1 } from "react-icons/ci";
+import { SlCalender } from "react-icons/sl";
+import { IoIosCall } from "react-icons/io";
 
 export function CardHoverEffectDemo() {
   return (
@@ -14,23 +18,44 @@ export const projects = [
 
     {
         icon : <div className="bg-blue-100 p-4 rounded-full"><PiMonitor className="w-8 h-8 text-blue-600" /></div>,
-        title: "Real Estate Website",
+        title: "Custom Profile Website",
         description:
-          "Your website is your opportunity to stand out from the crowd and set yourself apart.",
+          "Custom Design Tailored to Your Brand.",
       
       },
       {
         icon : <div className="bg-blue-100 p-4 rounded-full"><FaLaptopHouse className="w-8 h-8 text-blue-600" /></div>,
-        title: "IDX-Listings",
+        title: "Integrated Property Listings",
         description:
           "Provide a convenient way to display your listings to your clients.",
        
       },
       {
-        icon : <div className="bg-blue-100 p-4 rounded-full"><FaGears className="w-8 h-8 text-blue-600" /></div>,
-        title: "3rd Party Integrations",
+        icon : <div className="bg-blue-100 p-4 rounded-full"><CiMobile1 className="w-8 h-8 text-blue-600" /></div>,
+        title: "Mobile responsive",
         description:
-          "Integrate your website with your CRM and capture leads effectively.",
+          "Your profile website will work seamlessly on phones, tablets, laptops and desktops",
+       
+      },
+      {
+        icon : <div className="bg-blue-100 p-4 rounded-full"><MdAnalytics className="w-8 h-8 text-blue-600" /></div>,
+        title: "Track Performance",
+        description:
+          "Equiped with google analytics to allow you to track the performance of your promotions.",
+      
+      },
+      {
+        icon : <div className="bg-blue-100 p-4 rounded-full"><IoIosCall className="w-8 h-8 text-blue-600" /></div>,
+        title: "Call to action",
+        description:
+          "Strategically placed call to action to engage with potential clients.",
+      
+      },
+      {
+        icon : <div className="bg-blue-100 p-4 rounded-full"><SlCalender className="w-8 h-8 text-blue-600" /></div>,
+        title: "Calendar Integration",
+        description:
+          "Intergration with calendly to allow propects to book showings with you.",
       
       },
 

@@ -9,7 +9,7 @@ const FAQS = () => {
         ">
             <div className=" p-10 md:p-4 md:px-20">
                 <div className="text-3xl md:text-7xl font-bold text-black">
-                    Want a stunning 
+                    Want a stunning Personalized
                     <br />
                     Website ?
                 </div>

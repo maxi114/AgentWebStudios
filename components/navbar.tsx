@@ -6,6 +6,7 @@ import { AlignJustify, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import DropDownMenu from "./drop-down-menu";
+import "./navbar.css"
 
 interface NavbarProps {
   scrollToWebsiteDesign: () => void;
@@ -29,16 +30,16 @@ const Navbar = ({
   return (
     <div>
       <div className="p-6 md:p-10 flex items-center justify-between z-50">
-        <div>
-          <Link className="cursor-pointer" href="/">
+        <div className="lg">
+          <Link className="cursor-pointer lg2" href="/">
             <Image
               priority
-              src="/logo/logo.svg"
+              src="/prple.png"
               alt="Logo"
-              width={100}
-              height={100}
-              className="w-10 h-10 md:w-14 md:h-14"
-            />
+              width={50}
+              height={50}
+              className="lgo"
+            /> <h1>Agent Web</h1>
           </Link>
         </div>
         <div
@@ -49,17 +50,13 @@ const Navbar = ({
              bg-gradient-to-b from-neutral-50
               to bg-neutral-400 bg-opacity-50"
         >
-          <div onClick={scrollToWebsiteDesign} className="hover:text-gray-50">
-            Website Design
-          </div>
+          <Link href='/#webdesign'  className="hover:text-gray-50">
+          Web Design
+        </Link>
 
-          <div onClick={scrollToServices} className="hover:text-gray-50">
-            Services
-          </div>
-
-          <a href = "/pricing" className="hover:text-gray-50">
-            Pricing
-          </a>
+          <Link href='/#services'  className="hover:text-gray-50">
+          Features
+        </Link>
 
         </div>
 
