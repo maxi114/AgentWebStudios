@@ -34,7 +34,7 @@ const Navbar = ({
           <Link className="cursor-pointer lg2" href="/">
             <Image
               priority
-              src="/prple.png"
+              src="/logoo.png"
               alt="Logo"
               width={50}
               height={50}
@@ -56,6 +56,10 @@ const Navbar = ({
 
           <Link href='/#services'  className="hover:text-gray-50">
           Features
+        </Link>
+
+        <Link href="/book" className="hover:text-gray-50">
+          Book a call
         </Link>
 
         </div>

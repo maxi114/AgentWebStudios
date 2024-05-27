@@ -74,3 +74,10 @@
       @apply bg-background text-foreground;
     }
   }
+
+  .re{
+    color: #6b14fa;
+    background: linear-gradient(90deg, #6b14fa,#6b14fa, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }

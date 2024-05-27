@@ -1,3 +1,5 @@
+
+
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
@@ -14,7 +16,7 @@ export const metadata: Metadata = {
   title: "Agent Web",
   description: "created by Max",
   icons: {
-    icon: '/prple.png',
+    icon: '/logoo.png',
   },
 };
 
