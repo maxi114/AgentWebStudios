@@ -40,7 +40,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose, scrollToServices }
           Book a call
         </Link>
 
-        <Link href="/book" className="text-black text-2xl">
+        <Link href="/#webdesign" className="text-black text-2xl">
           Web Design
         </Link>
 
